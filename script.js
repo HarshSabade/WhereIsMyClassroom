@@ -538,7 +538,7 @@ Lab 6507(F1) / Lab 6506(F2) / Lab 6408(F3)</pre>`
                 NLec.innerHTML = ""
                 NLoc.innerHTML = ""
                 NFac.innerHTML = ""
-            }, 5000);
+            }, 2000);
         }
         give()
     }
