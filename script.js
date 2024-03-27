@@ -539,7 +539,7 @@ Lab 6507(F1) / Lab 6506(F2) / Lab 6408(F3)</pre>`
                     NLoc.innerHTML = ""
                     NFac.innerHTML = ""
                 }
-            }, 2000);
+            }, 100);
             today1.addEventListener("click", function () {
                 clearInterval(interval)
             })

@@ -7,7 +7,7 @@ function day() {
                         // For Monday
                         if (true)
                               window.location.href = "index1.html"
-                  }, 1000);
+                  }, 100);
             }
             give()
       }
