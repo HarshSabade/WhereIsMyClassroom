@@ -20,23 +20,35 @@ select {
     color: #AFAFAF;
     border-color: transparent;
     width: 50vw;
-    height:7vh ;
+    height: 7vh;
 }
 
 .head {
     display: flex;
     justify-content: center;
     position: relative;
-    top: 25vh;
+    top: 10vh;
+    flex-flow: column;
+    align-items: center;
+    gap: 50px;
 }
-.select{
+
+.select {
     display: flex;
     flex-direction: column;
     position: relative;
     align-items: center;
-    top: 35vh;
+    top: 17vh;
     gap: 10px;
-    }
-    .text{
-        font-size: 5vw;
-    }
+}
+
+.text {
+    font-size: 5vw;
+}
+.img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 5vh;
+}

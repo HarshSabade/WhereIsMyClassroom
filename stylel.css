@@ -1,7 +1,8 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+    font-family: monospace, 'Times New Roman', Times, serif, Times, serif;
 }
 
 body {
@@ -12,12 +13,13 @@ body {
 h1 {
     letter-spacing: 0.00000000000000000000000000000000000000000001px;
     font-size: 7.5vw;
-    width: 230px;
+    width: 15vw;
+    font-family: monospace, 'Times New Roman', Times, serif, Times, serif;
 }
 
-.head {
+.nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     margin-left: 10px;
     margin-top: 10px;
@@ -27,11 +29,12 @@ h1 {
 select {
     background-color: rgba(0, 0, 0, 0.26);
     border-radius: 7px;
-    color: #AFAFAF;
+    color: #c5c5c5;
     border-color: transparent;
-    width: 15vw;
+    width: 10vw;
     height: 4vh;
     top: 0;
+    margin-right: 10px;
     position: relative;
 }
 
@@ -40,31 +43,69 @@ select {
     flex-direction: column;
     position: relative;
     align-items: center;
-    gap: 10px;
+    margin-right: 10vw;
+    justify-content: space-evenly;
+    width: 85vw;
+    height: 7.5vh;
 }
 
 .text {
     font-size: 5vw;
 }
 
-.now,.then{
+.now,
+.then {
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: large;
     position: relative;
     top: 17vh;
+    gap: 10px;
 }
-.now{
-    font-size: x-large;
+
+.now {
+    /* font-size: 6vw; */
     text-align: left;
 }
-pre{
-    font-size: large;
+
+pre {
+    font-size: 4vw !important;
 }
-.then{
+
+.then {
     margin-top: 50px;
+    font-size: 5vw;
 }
-.current,.next{
-    font-weight: bold
+
+.current,
+.next {
+    font-weight: 600;
+    font-size: 7vw;
+}
+
+.today,
+.back {
+    background-color: rgba(0, 0, 0, 0.26);
+    border-radius: 7px;
+    border: transparent;
+    width: 50vw;
+    height: 4vh;
+    color: #c5c5c5;
+    margin-right: 7px;
+}
+
+.tflex {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    font-size: 5.7vw;
+    gap: 10px;
+}
+.back {
+    display: none;
+}
+.dept{
+    font-size: 7vw;
+    font-weight: 700;
 }

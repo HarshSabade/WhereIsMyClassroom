@@ -1,16 +1,16 @@
+let CLec = document.querySelector(".clecture")
+let CFac = document.querySelector(".cfaculty")
+let CLoc = document.querySelector(".clocation")
+let NLec = document.querySelector(".nlecture")
+let NFac = document.querySelector(".nfaculty")
+let NLoc = document.querySelector(".nlocation")
+let next = document.querySelector(".next")
+let current = document.querySelector(".current")
+let sel = document.getElementById("f").selected;
 function day() {
-    let CLec = document.querySelector(".clecture")
-    let CFac = document.querySelector(".cfaculty")
-    let CLoc = document.querySelector(".clocation")
-    let NLec = document.querySelector(".nlecture")
-    let NFac = document.querySelector(".nfaculty")
-    let NLoc = document.querySelector(".nlocation")
-    let next = document.querySelector(".next")
-    let current = document.querySelector(".current")
-    let sel = document.getElementById("f").selected;
     if (sel === true) {
         function give() {
-            var interval = setInterval(function () {
+            let interval = setInterval(function () {
                 var currentDate = new Date();
                 // For Monday
                 if (currentDate.getDay() === 1 && currentDate.getHours() < 9) {
@@ -23,8 +23,8 @@ function day() {
 DS, NT, Chem,
 Chem lab(F1) / DS lab(F2) / PSPP lab(F3),
 German / Japanese</pre>`
-                    NFac.innerHTML=""
-                    NLoc.innerHTML=""
+                    NFac.innerHTML = ""
+                    NLoc.innerHTML = ""
                     document.querySelector("good error").write("Fix bug")
                 }
                 else if (currentDate.getDay() === 1 && currentDate.getHours() === 9) {
@@ -529,16 +529,23 @@ Lab 6507(F1) / Lab 6506(F2) / Lab 6408(F3)</pre>`
                     NLoc.innerHTML = ""
                     document.querySelector("good error").write("Fix bug")
                 }
-                else
+                else {
                     CLec.innerHTML = "No upcoming lectures today"
-                current.innerHTML = ""
-                next.innerHTML = ""
-                CLoc.innerHTML = ""
-                CFac.innerHTML = ""
-                NLec.innerHTML = ""
-                NLoc.innerHTML = ""
-                NFac.innerHTML = ""
+                    current.innerHTML = ""
+                    next.innerHTML = ""
+                    CLoc.innerHTML = ""
+                    CFac.innerHTML = ""
+                    NLec.innerHTML = ""
+                    NLoc.innerHTML = ""
+                    NFac.innerHTML = ""
+                }
             }, 2000);
+            today1.addEventListener("click", function () {
+                clearInterval(interval)
+            })
+            back1.addEventListener("click", function () {
+                give()
+            })
         }
         give()
     }
@@ -547,3 +554,115 @@ Lab 6507(F1) / Lab 6506(F2) / Lab 6408(F3)</pre>`
     }
     console.log("hi");
 }
+let today1 = document.querySelector(".today")
+let back1 = document.querySelector(".back")
+function today() {
+    let interval1 = setInterval(() => {
+        var currentDate = new Date();
+        today1.style.display = "none"
+        back1.style.display = "block"
+        next.innerHTML = ""
+        current.innerHTML = ""
+        CLec.innerHTML = ""
+        CFac.innerHTML = ""
+        CLoc.innerHTML = ""
+        NLec.innerHTML = ""
+        NFac.innerHTML = ""
+        NLoc.innerHTML = ""
+        let todayfull = document.createElement("div")
+        todayfull.className = "tflex"
+        CLec.appendChild(todayfull)
+        let t1 = document.createElement("div")
+        t1.className = "t1"
+        let t2 = document.createElement("div")
+        t1.className = "t2"
+        let t3 = document.createElement("div")
+        t1.className = "t3"
+        let t4 = document.createElement("div")
+        t1.className = "t4"
+        let t5 = document.createElement("div")
+        t1.className = "t5"
+        let t6 = document.createElement("div")
+        t1.className = "t6"
+        let t7 = document.createElement("div")
+        t1.className = "t7"
+        let t8 = document.createElement("div")
+        t1.className = "t8"
+        let t9 = document.createElement("div")
+        t1.className = "t9"
+        todayfull.appendChild(t1)
+        todayfull.appendChild(t2)
+        todayfull.appendChild(t3)
+        todayfull.appendChild(t4)
+        todayfull.appendChild(t5)
+        todayfull.appendChild(t6)
+        todayfull.appendChild(t7)
+        todayfull.appendChild(t8)
+        todayfull.appendChild(t9)
+        // For Monday
+        if (currentDate.getDay() === 1) {
+            t1.innerHTML = "Today's Schedule"
+            t2.innerHTML = "DS - 09:00 to 10:00"
+            t3.innerHTML = "NT - 10:00 to 11:00"
+            t4.innerHTML = "Chem - 11:10 to 12:10"
+            t5.innerHTML = "Lunch Break - 12:10 to 13:00"
+            t6.innerHTML = "Chem(F1)/DS(F2)/PSPP(F3)"
+            t7.innerHTML = "- 13:00 to 15:00"
+            t8.innerHTML = "German / Japanese - 15:00 to 17:00"
+            t9.innerHTML = "Lecture ends at 17:00"
+        } 
+        else if(currentDate.getDay() === 2) {
+            t1.innerHTML = "Today's Schedule"
+            t2.innerHTML = "MC(F1) / DS(F2) / PSPP(F3)"
+            t3.innerHTML = "- 09:00 to 11:00"
+            t4.innerHTML = "IKS - 11:10 to 13:00"
+            t5.innerHTML = "Lunch Break - 13:00 to 14:00"
+            t6.innerHTML = "DS - 14:00 to 15:00"
+            t7.innerHTML = "Chem - 15:00 to 16:00"
+            t8.innerHTML = "N5 Japanese - 16:00 to 17:00"
+            t9.innerHTML = "Lecture ends at 17:00"
+        }
+        else if(currentDate.getDay() === 3) {
+            t1.innerHTML = "Today's Schedule"
+            t2.innerHTML = "MC - 09:00 to 10:00"
+            t3.innerHTML = "Chem - 10:00 to 11:00"
+            t4.innerHTML = "NT - 11:10 to 12:10"
+            t5.innerHTML = "Lunch Break - 12:10 to 13:00"
+            t6.innerHTML = "PSPP(F1) / MC(F2) / DS(F3)"
+            t7.innerHTML = "- 13:00 to 15:00"
+            t8.innerHTML = "Life Skills - 15:00 to 17:00"
+            t9.innerHTML = "Lecture ends at 17:00"
+        }
+        else if(currentDate.getDay() === 4) {
+            t1.innerHTML = "Today's Schedule"
+            t2.innerHTML = "MC - 11:10 to 12:10"
+            t3.innerHTML = "Lunch Break - 12:10 to 13:00"
+            t4.innerHTML = "Life Skills - 13:00 to 15:00"
+            t5.innerHTML = "PSPP(F1)/Chem(F2)/DS(F3)"
+            t6.innerHTML = "- 15:00 to 17:00"
+            t7.innerHTML = "Lecture ends at 17:00"
+        }
+        else if(currentDate.getDay() === 5) {
+            t1.innerHTML = "German / Japanese - 09:00 to 11:00"
+            t2.innerHTML = "DS(F1) / PSPP(F2) / MC(F3)"
+            t3.innerHTML = "- 11:10 to 13:10"
+            t4.innerHTML = "Lunch Break - 13:10 to 14:00"
+            t5.innerHTML = "DS - 14:00 to 15:00"
+            t6.innerHTML = "DS(F1) / PSPP(F2) / Chem(F3)"
+            t7.innerHTML = "- 15:00 to 17:00"
+            t8.innerHTML = "Lecture ends at 17:00"
+        }
+        else {
+            t1.innerHTML = "No lectures today"
+        }
+    }, 100);
+    back1.addEventListener("click", function () {
+        clearInterval(interval1)
+    })
+}
+function back() {
+    back1.style.display = "none"
+    today1.style.display = "block"
+}
+today1.addEventListener("click", today)
+back1.addEventListener("click", back)
