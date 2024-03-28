@@ -343,7 +343,7 @@ Classroom 6401(F1) / Classroom 6402(F2)</pre>`
                     CFac.innerHTML = "Faculty - Rajesh Talekar Sir"
                     CLoc.innerHTML = "Location - Classroom 6515"
                     NLec.innerHTML = `<pre>
-DS, Life Skills,
+MC, Life Skills,
 PSPP lab(F1) / Chem lab(F2) / DS lab(F3)</pre>`
                     NFac.innerHTML = ""
                     NLoc.innerHTML = ""
