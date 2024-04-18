@@ -6,7 +6,7 @@ function day() {
                         var currentDate = new Date();
                         if (true)
                               window.location.href = "index1.html"
-                  }, 100);
+                  }, 1000);
             }
             give()
       }
