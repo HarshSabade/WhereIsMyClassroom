@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body{
+  height: 100vh;
+  background-color: rgb(235, 198, 144);
+}
+select {
+  background-color: rgba(228, 170, 100, 0.89);
+  border: 0px;
+  border-radius: 10px;
+  padding: 3px;
+}
+.collegephoto {
+  background-image: url("college photo.jpg");
+  background-repeat: no-repeat;
+  text-align: center;
+  height:40vh;
+  width: 100vw;
+  background-size: contain;
+  position: relative;
+}
+
+.division {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  gap: 20px;
+  flex-direction: column;
+  flex-wrap: wrap;
+   
+}
+.collegename{
+  text-align: center;
+  top: 0px;
+}

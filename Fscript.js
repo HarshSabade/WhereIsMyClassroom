@@ -4,7 +4,6 @@ function day() {
             function give() {
                   var interval = setInterval(function () {
                         var currentDate = new Date();
-                        // For Monday
                         if (true)
                               window.location.href = "index1.html"
                   }, 100);
